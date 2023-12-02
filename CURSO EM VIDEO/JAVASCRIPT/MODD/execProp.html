@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXEC0009</title>
+</head>
+<body>
+    <h1>Verificar identidade</h1>
+    insira aqui seu pais: <input type="text" name="txtid" id="txtid">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular(){
+            var txtId = window.document.querySelector('input#txtid');
+            var res = window.document.getElementById('res')
+            let iden = String(txtId.value)
+            res.innerHTML = 'voce digitou ' + iden
+            if(iden != 'brasil'){
+                res.innerHTML += `<p> você não é brasileiro <p>`
+            }else{
+                res.innerHTML += `<p> voce é brasileiro <p>`
+            }
+        }
+    </script>
+</body>
+</html>
